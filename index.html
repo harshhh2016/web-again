@@ -1,0 +1,16 @@
+<script>
+  if (!localStorage.getItem("loggedInUser")) {
+    window.location.href = "login.html";
+  }
+</script>
+<button onclick="logout()" id="logoutBtn">
+  Logout
+</button>
+<script>
+  const user = localStorage.getItem("loggedInUser");
+  const logoutBtn = document.getElementById("logoutBtn");
+
+  if (!user) {
+    logoutBtn.style.display = "none";
+  }
+</script>
